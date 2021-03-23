@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <ul class="BlackUL">
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+    </ul>
+    <div class="Textbox">
+      <h1>Bienvenu  sur notre plateforme !</h1>  
+    </div>
+  </body>
+</html>
+<style>
+    ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.BlackUL {
+
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  .Textbox{
+    text-align: center;
+    vertical-align: center;
+    margin: 100px;
+    padding: 30px;
+    border: 3px solid #111;
+  }
+  .boldServices{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+.boldServices li{
+  float: initial;
+}
+.boldServices li a{
+  color: #111;;
+}
+.boldServices li a:hover{
+  color: white;;
+}
+</style>
