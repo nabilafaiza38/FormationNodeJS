@@ -1,0 +1,15 @@
+1- Create Database: use contact 
+ - Create a collection: db.createCollection('contactlist')
+2- Insert documents: 
+db.contactlist.insert([{Last_name: 'Ben Lahmer', First_name: 'Fares', Email: 'fares@gmail.com', age:26},
+{Last_name: 'Kefi', First_name: 'Seif', Email: 'kefi@gmail.com', age:15},
+{Last_name: 'Fatnassi', First_name: 'Sarra', Email: 'sarra.f@gmail.com', age:40},
+{Last_name: 'Ben Yahia', First_name: 'Rym', age:4},
+{Last_name: 'Cherif', First_name: 'Sami', age:3}])
+
+3- Display all the contact list: db.contactlist.find()
+4- Display all the information about only one person using his id: db.contactlist.find({'_id': ObjectId("605e7381af07d3dc5e261b8c")})
+5- Display all the contact list having age>18: db.contactlist.find( { age: { $gt:18 } } )
+6- Display all the contact list having age>18 and name containing "ah": db.contactlist.find({ age: { $gt:18 }, Last_name: { $regex: /ah/ }  })
+7- Change the contact first name of "kefi Seif" by "Kefi Anis": db.contactlist.update({Last_name: 'Kefi', First_name: 'Seif'},{Last_name: 'Kefi', First_name: 'Anis', Email: 'kefi@gmail.com', age:15})
+8- Delete the the contact list having age < 5: db.contactlist.deleteMany( { age: { $lt:5 } } )
