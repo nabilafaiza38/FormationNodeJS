@@ -5,7 +5,7 @@ var db = require('./Config/db')
 const bp = require('body-parser');
 
 app.use(bp.json());
-
+ 
 var PersonRoute= require("./Routes/PersonRoute")
 PersonRoute.init(router)
 
